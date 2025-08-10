@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oyun Botu</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #1e1e2f;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    input {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      margin-left: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+      background-color: #0077ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .response {
+      margin-top: 30px;
+      font-size: 18px;
+      text-align: center;
+    }
+    .response img {
+      margin-top: 15px;
+      max-width: 250px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🤖 CLanta Bot</h1>
+  <div>
+    <input id="userInput" type="text" placeholder="Sualını yaz...">
+    <button onclick="getResponse()">Soruş</button>
+  </div>
+  <div class="response" id="botResponse"></div>
+
+  <script>
+    function getResponse() {
+      const input = document.getElementById("userInput").value.toLowerCase().trim();
+      let response = "";
+      let image = "";
+
+      if (input === "selam") {
+        response = "Selam, Brawl Stars oyunu hakkında yardım ola bileceyım bır şey varsa buyur ☺️                                                                                                                       Komutlar listesi için !komutlar yazın";
+      } 
+      else if (input === "!komutlar") {
+        response = "En iyi buildler için !best build (karakter)";
+      }
+      else if (input === "!best build eve") {
+        response = "Buyur Eve best build:";
+        image = "<img src='bestbuild16000056.png' alt='Eve şekli'>";
+      } 
+      else if (input === "!best build shelly") {
+        response = "Buyur Shelly best build:";
+        image = "<img src='bestbuild16000000.png' alt='Shelly şekli'>";
+      } 
+      else if (input === "!best build colt") {
+        response = "Buyur Colt best build:";
+        image = "<img src='bestbuild16000001.png' alt='Colt şekli'>";
+      } 
+      else if (input === "!best build nita") {
+        response = "Buyur Nita best build:";
+        image = "<img src='bestbuild16000008.png' alt='Nita şekli'>";
+      } 
+      else if (input === "!best build rosa") {
+        response = "Buyur Rosa best build:";
+        image = "<img src='bestbuild16000024.png' alt='Rosa şekli'>";
+      } 
+      else if (input === "!best build poco") {
+        response = "Buyur Poco best build:";
+        image = "<img src='bestbuild16000013.png' alt='Poco şekli'>";
+      } 
+      else if (input === "!best build el primo") {
+        response = "Buyur El primo best build:";
+        image = "<img src='bestbuild16000010.png' alt='Bull şekli'>";
+      } 
+      else if (input === "!best build bull") {
+        response = "Buyur Bull best build:";
+        image = "<img src='bestbuild16000002.png' alt='El primo şekli'>";
+      } 
+      else if (input === "!best build brock") {
+        response = "Buyur Brock best build:";
+        image = "<img src='bestbuild16000003.png' alt='Brock şekli'>";
+      } 
+      else if (input === "!best build rico") {
+        response = "Buyur Rico best build:";
+        image = "<img src='bestbuild16000004.png' alt='Rico şekli'>";
+      } 
+      else if (input === "!best build barley") {
+        response = "Buyur Barley best build:";
+        image = "<img src='bestbuild16000006.png' alt='Barley şekli'>";
+      } 
+      else if (input === "!best build jessie") {
+        response = "Buyur Jessie best build:";
+        image = "<img src='bestbuild16000007.png' alt='Jessei şekli'>";
+      } 
+      else if (input === "!best build dynamike") {
+        response = "Buyur Dynamike best build:";
+        image = "<img src='bestbuild16000009.png' alt='Dynamike şekli'>";
+      } 
+      else if (input === "!best build darryl") {
+        response = "Buyur Darryl best build:";
+        image = "<img src='bestbuild16000018.png' alt='Darryl şekli'>";
+      } 
+      else if (input === "!best build penny") {
+        response = "Buyur Penny best build:";
+        image = "<img src='bestbuild16000019.png' alt='Penny şekli'>";
+      } 
+      else if (input === "!best build tick") {
+        response = "Buyur Tick best build:";
+        image = "<img src='bestbuild16000022.png' alt='Tick şekli'>";
+      } 
+      else if (input === "!best build carl") {
+        response = "Buyur Carl best build:";
+        image = "<img src='bestbuild16000025.png' alt='Carl şekli'>";
+      } 
+      else if (input === "!best build 8-bit") {
+        response = "Buyur 8-bit best build:";
+        image = "<img src='bestbuild16000027.png' alt='8-bit şekli'>";
+      } 
+      else if (input === "!best build jacky") {
+        response = "Buyur Jacky best build:";
+        image = "<img src='bestbuild16000034.png' alt='Jacky şekli'>";
+      } 
+      else if (input === "!best build gus") {
+        response = "Buyur Gus best build:";
+        image = "<img src='bestbuild16000061.png' alt='Gus şekli'>";
+      } 
+      else if (input === "!best build bo") {
+        response = "Buyur Bo best build:";
+        image = "<img src='bestbuild16000014.png' alt='Bo şekli'>";
+      } 
+      else if (input === "!best build piper") {
+        response = "Buyur Piper best build:";
+        image = "<img src='bestbuild16000015.png' alt='Piper şekli'>";
+      } 
+      else if (input === "!best build pam") {
+        response = "Buyur Pam best build:";
+        image = "<img src='bestbuild16000016.png' alt='Pam şekli'>";
+      } 
+      else if (input === "!best build frank") {
+        response = "Buyur Frank best build:";
+        image = "<img src='bestbuild16000020.png' alt='Frank şekli'>";
+      } 
+      else if (input === "!best build el bibi") {
+        response = "Buyur Bibi best build:";
+        image = "<img src='bestbuild16000026.png' alt='Bibi şekli'>";
+      } 
+      else if (input === "!best build bea") {
+        response = "Buyur Bea best build:";
+        image = "<img src='bestbuild16000029.png' alt='Bea şekli'>";
+      } 
+      else if (input === "!best build emz") {
+        response = "Buyur Emz best build:";
+        image = "<img src='bestbuild16000030.png' alt='Emz şekli'>";
+      } 
+      else if (input === "!best build gale") {
+        response = "Buyur Gale best build:";
+        image = "<img src='bestbuild16000035.png' alt='Gale şekli'>";
+      } 
+      else if (input === "!best build nani") {
+        response = "Buyur Nani best build:";
+        image = "<img src='bestbuild16000036.png' alt='Nani şekli'>";
+      } 
+      else if (input === "!best build colette") {
+        response = "Buyur Colette best build:";
+        image = "<img src='bestbuild16000039.png' alt='Colette şekli'>";
+      } 
+      else if (input === "!best build edgar") {
+        response = "Buyur Edgar best build:";
+        image = "<img src='bestbuild16000043.png' alt='Edgar şekli'>";
+      } 
+      else if (input === "!best build stu") {
+        response = "Buyur Stu best build:";
+        image = "<img src='bestbuild16000045.png' alt='Stu şekli'>";
+      } 
+      else if (input === "!best build bella") {
+        response = "Buyur Bella best build:";
+        image = "<img src='bestbuild16000046.png' alt='Bella şekli'>";
+      } 
+      else if (input === "!best build grom") {
+        response = "Buyur Grom best build:";
+        image = "<img src='bestbuild16000048.png' alt='Grom şekli'>";
+      } 
+      else if (input === "!best build griff") {
+        response = "Buyur Griff best build:";
+        image = "<img src='bestbuild16000050.png' alt='Griff şekli'>";
+      } 
+      else if (input === "!best build sam") {
+        response = "Buyur Sam best build:";
+        image = "<img src='bestbuild16000060.png' alt='Sam şekli'>";
+      } 
+
+      else if (input === "!best build bonnie") {
+        response = "Buyur Bonnie best build:";
+        image = "<img src='bestbuild16000058.png' alt='Bonnie şekli'>";
+      } 
+      else if (input === "!best build ash") {
+        response = "Buyur Griff best build:";
+        image = "<img src='bestbuild16000051.png' alt='Ash şekli'>";
+      } 
+      else if (input === "!best build lola") {
+        response = "Buyur Griff best build:";
+        image = "<img src='bestbuild16000053.png' alt='Lola şekli'>";
+      } 
+      else if (input === "!best build mandy") {
+        response = "Buyur Griff best build:";
+        image = "<img src='bestbuild16000065.png' alt='Mandy şekli'>";
+      } 
+      else if (input === "!best build maisie") {
+        response = "Buyur Griff best build:";
+        image = "<img src='bestbuild16000068.png' alt='Maisie şekli'>";
+      } 
+      else if (input === "!best build hank") {
+        response = "Buyur Griff best build:";
+        image = "<img src='bestbuild16000069.png' alt='Hank şekli'>";
+      } 
+      else if (input === "!best build pearl") {
+        response = "Buyur Griff best build:";
+        image = "<img src='bestbuild16000072.png' alt='Pearl şekli'>";
+      } 
+      else if (input === "!best build l & l") {
+        response = "Buyur Griff best build:";
+        image = "<img src='bestbuild16000077.png' alt='L & L şekli'>";
+      } 
+      else if (input === "!best build angelo") {
+        response = "Buyur Angelo best build:";
+        image = "<img src='bestbuild16000079.png' alt='Angelo şekli'>";
+      } 
+      else if (input === "!best build berry") {
+        response = "Buyur Berry best build:";
+        image = "<img src='bestbuild16000082.png' alt='Berry şekli'>";
+      } 
+      else if (input === "!best build shade") {
+        response = "Buyur Shade best build:";
+        image = "<img src='bestbuild16000086.png' alt='Shade şekli'>";
+      } 
+      else if (input === "!best build meeple") {
+        response = "Buyur Meeple best build:";
+        image = "<img src='bestbuild16000089.png' alt='Meeple şekli'>";
+      } 
+      else if (input === "!best build tara") {
+        response = "Buyur Tara best build:";
+        image = "<img src='bestbuild16000017.png' alt='Tara şekli'>";
+      } 
+      else if (input === "!best build gene") {
+        response = "Buyur Gene best build:";
+        image = "<img src='bestbuild16000021.png' alt='Gene şekli'>";
+      } 
+      else if (input === "!best build max") {
+        response = "Buyur Max best build:";
+        image = "<img src='bestbuild16000032.png' alt='Max şekli'>";
+      } 
+      else if (input === "!best build mr.p") {
+        response = "Buyur MR.P best build:";
+        image = "<img src='bestbuild16000031.png' alt='MR.P şekli'>";
+      } 
+      else if (input === "!best build mortis") {
+        response = "Buyur Mortis best build:";
+        image = "<img src='bestbuild16000011.png' alt='Mortis şekli'>";
+      } 
+      else if (input === "!best build sprout") {
+        response = "Buyur Sprout best build:";
+        image = "<img src='bestbuild16000037.png' alt='Sprout şekli'>";
+      } 
+      else if (input === "!best build byron") {
+        response = "Buyur Byron best build:";
+        image = "<img src='bestbuild16000042.png' alt='Byron şekli'>";
+      } 
+      else if (input === "!best build squeak") {
+        response = "Buyur Squeak best build:";
+        image = "<img src='bestbuild16000047.png' alt='Squeak şekli'>";
+      } 
+      else if (input === "!best build lou") {
+        response = "Buyur Lou best build:";
+        image = "<img src='bestbuild16000041.png' alt='Lou şekli'>";
+      } 
+      else if (input === "!best build ruffs") {
+        response = "Buyur Ruffs best build:";
+        image = "<img src='bestbuild16000044.png' alt='Ruffs şekli'>";
+      } 
+      else if (input === "!best build buzz") {
+        response = "Buyur Buzz best build:";
+        image = "<img src='bestbuild16000049.png' alt='Buzz şekli'>";
+      } 
+      else if (input === "!best build fang") {
+        response = "Buyur Fang best build:";
+        image = "<img src='bestbuild16000054.png' alt='Fang şekli'>";
+      } 
+      else if (input === "!best build janet") {
+        response = "Buyur Janet best build:";
+        image = "<img src='bestbuild16000057.png' alt='Janet şekli'>";
+      } 
+      else if (input === "!best build otis") {
+        response = "Buyur Otis best build:";
+        image = "<img src='bestbuild16000059.png' alt='Otis şekli'>";
+      } 
+      else if (input === "!best build buster") {
+        response = "Buyur Buster best build:";
+        image = "<img src='bestbuild16000062.png' alt='Buster şekli'>";
+      } 
+      else if (input === "!best build gray") {
+        response = "Buyur Gray best build:";
+        image = "<img src='bestbuild16000064.png' alt='Gray şekli'>";
+      } 
+      else if (input === "!best build r-t") {
+        response = "Buyur R-T best build:";
+        image = "<img src='bestbuild16000066.png' alt='R-T şekli'>";
+      } 
+      else if (input === "!best build willow") {
+        response = "Buyur Willow best build:";
+        image = "<img src='bestbuild16000067.png' alt='Willow şekli'>";
+      } 
+      else if (input === "!best build doug") {
+        response = "Buyur Doug best build:";
+        image = "<img src='bestbuild16000071.png' alt='Doug şekli'>";
+      } 
+      else if (input === "!best build chuck") {
+        response = "Buyur Chuck best build:";
+        image = "<img src='bestbuild16000073.png' alt='Chuck şekli'>";
+      } 
+      else if (input === "!best build charlie") {
+        response = "Buyur Charlie best build:";
+        image = "<img src='bestbuild16000074.png' alt='Charlie şekli'>";
+      } 
+      else if (input === "!best build mico") {
+        response = "Buyur Mico best build:";
+        image = "<img src='bestbuild16000075.png' alt='Mico şekli'>";
+      } 
+      else if (input === "!best build melodie") {
+        response = "Buyur Melodie best build:";
+        image = "<img src='bestbuild16000078.png' alt='Melodie şekli'>";
+      } 
+      else if (input === "!best build lily") {
+        response = "Buyur Lily best build:";
+        image = "<img src='bestbuild16000081.png' alt='Lily şekli'>";
+      } 
+      else if (input === "!best build leon") {
+        response = "Buyur Leon best build:";
+        image = "<img src='bestbuild16000023.png' alt='Leon şekli'>";
+      } 
+      else if (input === "!best build spike") {
+        response = "Buyur Spike best build:";
+        image = "<img src='bestbuild16000005.png' alt='Spike şekli'>";
+      } 
+      else if (input === "!best build crow") {
+        response = "Buyur Crow best build:";
+        image = "<img src='bestbuild16000012.png' alt='Crow şekli'>";
+      } 
+      else if (input === "!best build meg") {
+        response = "Buyur Meg best build:";
+        image = "<img src='bestbuild16000052.png' alt='Meg şekli'>";
+      } 
+      else if (input === "!best build amber") {
+        response = "Buyur Amber best build:";
+        image = "<img src='bestbuild16000040.png' alt='Amber şekli'>";
+      } 
+      else if (input === "!best build sandy") {
+        response = "Buyur Sandy best build:";
+        image = "<img src='bestbuild16000028.png' alt='Sandy şekli'>";
+      } 
+      else if (input === "!best build surge") {
+        response = "Buyur Surge best build:";
+        image = "<img src='bestbuild16000038.png' alt='Surge şekli'>";
+      } 
+      else if (input === "!best build chester") {
+        response = "Buyur Chester best build:";
+        image = "<img src='bestbuild16000063.png' alt='Chester şekli'>";
+      } 
+      else if (input === "!best build cordelius") {
+        response = "Buyur Cordelius best build:";
+        image = "<img src='bestbuild16000070.png' alt='Cordelius şekli'>";
+      } 
+      else if (input === "!best build kit") {
+        response = "Buyur Kit best build:";
+        image = "<img src='bestbuild16000076.png' alt='Kit şekli'>";
+      } 
+      else if (input === "!best build draco") {
+        response = "Buyur Draco best build:";
+        image = "<img src='bestbuild16000080.png' alt='Draco şekli'>";
+      } 
+      else if (input === "!best build kenji") {
+        response = "Buyur Kenji best build:";
+        image = "<img src='bestbuild16000085.png' alt='Kenji şekli'>";
+      } 
+      else if (input === "!best build kaze") {
+        response = "Buyur Kaze best build:";
+        image = "<img src='bestbuild16000094.png' alt='Kaze şekli'>";
+      } 
+      else if (input === "!best build clancy") {
+        response = "Buyur Clancy best build:";
+        image = "<img src='bestbuild16000083.png' alt='Clancy şekli'>";
+      } 
+      else if (input === "!best build moe") {
+        response = "Buyur Moe best build:";
+        image = "<img src='bestbuild16000084.png' alt='Moe şekli'>";
+      } 
+      else if (input === "!best build juju") {
+        response = "Buyur Juju best build:";
+        image = "<img src='bestbuild16000087.png' alt='Juju şekli'>";
+      } 
+      else if (input === "!best build ollie") {
+        response = "Buyur Ollie best build:";
+        image = "<img src='bestbuild16000090.png' alt='Ollie şekli'>";
+      } 
+      else if (input === "!best build lumi") {
+        response = "Buyur Lumi best build:";
+        image = "<img src='bestbuild16000091.png' alt='Lumi şekli'>";
+      } 
+      else if (input === "!best build jae-yong") {
+        response = "Buyur Jae-yong best build:";
+        image = "<img src='bestbuild16000093.png' alt='Jae-yong şekli'>";
+      } 
+      else if (input === "!best build finx") {
+        response = "Buyur Finx best build:";
+        image = "<img src='bestbuild16000092.png' alt='Finx şekli'>";
+      } 
+      else if (input === "!best build alli") {
+        response = "Buyur Alli best build:";
+        image = "<img src='bestbuild16000095.png' alt='Alli şekli'>";
+      } 
+      else if (input.includes("lgcheon")) {
+        response = "Leon üçün ən yaxşı build: Yıldız gücü - Invisiheal, Aksesuar - Clone Projector, Diş - Sağlamlıq.";;
+      } 
+      else {
+        response = "Bağışla, bu sual üçün cavabım yoxdur.";
+      }
+
+      document.getElementById("botResponse").innerHTML = response + (image ? "<br>" + image : "");
+    }
+  </script>
+
+<footer style="position:fixed;left:0;bottom:0;width:100%;background:#1e1e2f;color:#fff;text-align:center;padding:6px;font-size:12px;z-index:9999;">
+  Brawl Stars ve tüm ilgili materyaller © Supercell'e aittir. Bu site resmi olmayan bir hayran projesidir.
+</footer>
+
+</body>
+</html>
+
